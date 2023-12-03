@@ -1,0 +1,52 @@
+{
+  "newsArticles": [
+    {
+      "id": 1,
+      "title": "OpenAI in Talks to Raise New Funding at $100 Billion Valuation (Bloomberg)",
+      "summary": "OpenAI, renowned for its cutting-edge ChatGPT chatbot, is reportedly negotiating to secure new funding at an impressive valuation of $100 billion, positioning it among the elite echelons of global AI enterprises.",
+      "imageUrl": "https://s.yimg.com/ny/api/res/1.2/iNu7svdMAUtgIuSk1FjcKA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY0NDtjZj13ZWJw/https://media.zenfs.com/en/reuters-finance.com/6860d996d9998f88ca47863a6310bb9f",
+      "fullArticle": "https://finance.yahoo.com/news/openai-talks-raise-funding-100-212800503.html",
+      "link": "https://finance.yahoo.com/news/openai-talks-raise-funding-100-212800503.html"
+    },
+    {
+      "id": 2,
+      "title": "Facebook's Meta Fined for Breaches of Italian Gambling Ads Ban (Reuters)",
+      "summary": "Meta Platforms Inc., the conglomerate behind Facebook, Instagram, and WhatsApp, has incurred a €20 million fine from Italian regulatory bodies for contravening the nation's stringent prohibitions on gambling advertisements, highlighting the ongoing challenges in digital advertising compliance.",
+      "imageUrl": "https://www.reuters.com/resizer/W-QWC7Av4ki67-lrdqtkBOze4E4=/1200x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/U5ZRX2E37ZORVKWANHBURAMMGA.jpg",
+      "fullArticle": "https://www.reuters.com/technology/meta-hit-by-record-12-bln-euro-fine-by-eu-over-us-data-transfers-2023-05-22/",
+      "link": "https://www.reuters.com/technology/meta-hit-by-record-12-bln-euro-fine-by-eu-over-us-data-transfers-2023-05-22/"
+    },
+    {
+      "id": 3,
+      "title": "US Government's Proposal to Boost EV Sales is Challenging but Not Impossible (CNN)",
+      "summary": "The Biden administration's ambitious proposal introduces a suite of tax incentives and regulatory frameworks aimed at catalyzing the electric vehicle (EV) market in the United States, a strategic move in the context of climate change mitigation and sustainable energy transition.",
+      "imageUrl": "https://media.cnn.com/api/v1/images/stellar/prod/220714163144-embargoed-01-gm-chevy-blazer-suv.jpg?q=w_1110,c_fill/f_webp",
+      "fullArticle": "https://www.cnn.com/2023/04/12/business/electric-car-regulations-response/index.html",
+      "link": "https://www.cnn.com/2023/04/12/business/electric-car-regulations-response/index.html"
+    },
+    {
+      "id": 4,
+      "title": "Microsoft's Copilot Rises From the Ashes of Bob and Clippy (TechNewsWorld)",
+      "summary": "Microsoft's latest innovation, Copilot, integrated into the Visual Studio Code editor, marks a significant advancement in AI-assisted programming, far surpassing its predecessors like Bob and Clippy, by harnessing the power of machine learning to streamline the software development process.",
+      "imageUrl": "https://www.technewsworld.com/wp-content/uploads/sites/3/2023/10/Microsoft-Copilot.jpg",
+      "fullArticle": "https://www.technewsworld.com/story/microsofts-copilot-rises-from-the-ashes-of-bob-and-clippy-178799.html",
+      "link": "https://www.technewsworld.com/story/microsofts-copilot-rises-from-the-ashes-of-bob-and-clippy-178799.html"
+    },
+    {
+      "id": 5,
+      "title": "India Boosts AI in Weather Forecasts as Floods and Droughts Increase (Reuters)",
+      "summary": "In response to escalating climatic extremes, India is leveraging advanced artificial intelligence algorithms at the Indian Institute of Technology (IIT) Delhi, to refine meteorological models for more precise and timely weather predictions, crucial for managing hydrological disasters.",
+      "imageUrl": "https://www.reuters.com/resizer/oWPatDlkSa911-uogNKqIdH16pk=/960x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/ZZMYUHCW7ZLCHNQKPNONETN3BY.jpg",
+      "fullArticle": "https://www.reuters.com/business/environment/india-boosts-ai-weather-forecasts-floods-droughts-increase-2023-12-22/",
+      "link": "https://www.reuters.com/business/environment/india-boosts-ai-weather-forecasts-floods-droughts-increase-2023-12-22/"
+    }
+  ],
+  "latestNews": {
+    "id": 0,
+    "title": "Salesforce Escaped from the Jaws of Activists to Find Stability in 2023 (TechCrunch)",
+    "summary": "Emerging unscathed from a tumultuous period of activist investor scrutiny and executive reshuffles, Salesforce has solidified its position in the cloud computing sphere, poised for robust growth and technological innovation in the foreseeable future.",
+    "imageUrl": "https://techcrunch.com/wp-content/uploads/2023/12/GettyImages-10182027.jpg?resize=1200,886",
+    "fullArticle": "https://beamstart.com/news/salesforce-escaped-from-the-jaws-17034404941229",
+    "link": "https://beamstart.com/news/salesforce-escaped-from-the-jaws-17034404941229"
+  }
+}
