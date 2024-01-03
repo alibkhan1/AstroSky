@@ -2,51 +2,51 @@
   "newsArticles": [
     {
       "id": 1,
-      "title": "OpenAI in Talks to Raise New Funding at $100 Billion Valuation (Bloomberg)",
-      "summary": "OpenAI, the research group behind the powerful ChatGPT chatbot, is in talks to raise new funding at a valuation of $100 billion, according to Bloomberg. This would make it one of the most valuable AI companies in the world.",
-      "imageUrl": "https://s.yimg.com/ny/api/res/1.2/iNu7svdMAUtgIuSk1FjcKA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY0NDtjZj13ZWJw/https://media.zenfs.com/en/reuters-finance.com/6860d996d9998f88ca47863a6310bb9f",
-      "fullArticle": "https://finance.yahoo.com/news/openai-talks-raise-funding-100-212800503.html",
-      "link": "https://finance.yahoo.com/news/openai-talks-raise-funding-100-212800503.html"
+      "title": "NASA Sets Coverage for ULA, Astrobotic Artemis Robotic Moon Launch",
+      "summary": "On January 8, NASA, in collaboration with United Launch Alliance and Astrobotic, will launch the first commercial robotic moon mission from Cape Canaveral, culminating in a lunar landing on February 23, with live coverage available from January 4.",
+      "imageUrl": "https://www.nasa.gov/wp-content/uploads/2023/12/astrobotic-photo.jpg?resize=1536,1022",
+      "fullArticle": "https://www.nasa.gov/news-release/nasa-sets-coverage-for-ula-astrobotic-artemis-robotic-moon-launch/",
+      "link": "https://www.nasa.gov/news-release/nasa-sets-coverage-for-ula-astrobotic-artemis-robotic-moon-launch/"
     },
     {
       "id": 2,
-      "title": "Facebook's Meta Fined for Breaches of Italian Gambling Ads Ban (Reuters)",
-      "summary": "Meta, the parent company of Facebook, Instagram, and WhatsApp, has been fined €20 million by Italian authorities for violating the country's ban on gambling advertising. The fine relates to targeted ads for online gambling companies that were shown to users in Italy.",
-      "imageUrl": "https://www.reuters.com/resizer/W-QWC7Av4ki67-lrdqtkBOze4E4=/1200x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/U5ZRX2E37ZORVKWANHBURAMMGA.jpg",
-      "fullArticle": "https://www.reuters.com/technology/meta-hit-by-record-12-bln-euro-fine-by-eu-over-us-data-transfers-2023-05-22/",
-      "link": "https://www.reuters.com/technology/meta-hit-by-record-12-bln-euro-fine-by-eu-over-us-data-transfers-2023-05-22/"
+      "title": "NASA’s Juno to Get Close Look at Jupiter’s Volcanic Moon Io on Dec. 30",
+      "summary": "The orbiter has performed 56 flybys of Jupiter and documented close encounters with three of the gas giant’s four largest moons. NASA’s Juno spacecraft will on Saturday, Dec. 30, make the closest flyby of Jupiter’s moon Io that any spacecraft has made in over 20 years.",
+      "imageUrl": "https://www.nasa.gov/wp-content/uploads/2023/12/1-pia26234-io-flyby-image2.jpg?resize=1481,1536",
+      "fullArticle": "https://www.nasa.gov/missions/juno/nasas-juno-to-get-close-look-at-jupiters-volcanic-moon-io-on-dec-30/",
+      "link": "https://www.nasa.gov/missions/juno/nasas-juno-to-get-close-look-at-jupiters-volcanic-moon-io-on-dec-30/"
     },
     {
       "id": 3,
-      "title": "US Government's Proposal to Boost EV Sales is Challenging but Not Impossible (CNN)",
-      "summary": "The Biden administration has proposed a new set of tax incentives and regulations aimed at boosting electric vehicle (EV) sales in the United States. The proposal faces an uphill battle in Congress, but experts say it could still have a significant impact on the EV market.",
-      "imageUrl": "https://media.cnn.com/api/v1/images/stellar/prod/220714163144-embargoed-01-gm-chevy-blazer-suv.jpg?q=w_1110,c_fill/f_webp",
-      "fullArticle": "https://www.cnn.com/2023/04/12/business/electric-car-regulations-response/index.html",
-      "link": "https://www.cnn.com/2023/04/12/business/electric-car-regulations-response/index.html"
+      "title": "Ringing in the Holidays",
+      "summary": "In a recent image from the James Webb Space Telescope, Uranus and its rings are vividly captured, showcasing the planet's polar cap and dynamic storms.",
+      "imageUrl": "https://www.nasa.gov/wp-content/uploads/2023/12/53404881117-64e0071ca0-o.png?resize=1536,1299",
+      "fullArticle": "https://www.nasa.gov/image-article/ringing-in-the-holidays/",
+      "link": "https://www.nasa.gov/image-article/ringing-in-the-holidays/"
     },
     {
       "id": 4,
-      "title": "Microsoft's Copilot Rises From the Ashes of Bob and Clippy (TechNewsWorld)",
-      "summary": "Microsoft's new Copilot feature for its Visual Studio Code editor is being praised for its ability to help developers write code more efficiently. Copilot builds on the legacy of previous Microsoft AI assistants like Bob and Clippy, but it is far more powerful and versatile.",
-      "imageUrl": "https://www.technewsworld.com/wp-content/uploads/sites/3/2023/10/Microsoft-Copilot.jpg",
-      "fullArticle": "https://www.technewsworld.com/story/microsofts-copilot-rises-from-the-ashes-of-bob-and-clippy-178799.html",
-      "link": "https://www.technewsworld.com/story/microsofts-copilot-rises-from-the-ashes-of-bob-and-clippy-178799.html"
+      "title": "Meet the Infrared Telescopes That Paved the Way for NASA’s Webb",
+      "summary": "The Webb telescope has opened a new window onto the universe, but it builds on missions going back 40 years, including Spitzer and the Infrared Astronomical Satellite.",
+      "imageUrl": "https://www.nasa.gov/wp-content/uploads/2023/12/1-pia25790-infrared-telescopes.png?resize=1536,859",
+      "fullArticle": "https://www.nasa.gov/universe/meet-the-infrared-telescopes-that-paved-the-way-for-nasas-webb/",
+      "link": "https://www.nasa.gov/universe/meet-the-infrared-telescopes-that-paved-the-way-for-nasas-webb/"
     },
     {
       "id": 5,
-      "title": "India Boosts AI in Weather Forecasts as Floods and Droughts Increase (Reuters)",
-      "summary": "India is turning to artificial intelligence (AI) to improve its weather forecasting capabilities in the wake of increasingly frequent floods and droughts. The Indian Institute of Technology (IIT) Delhi is developing a new AI-powered weather model that will be used to provide more accurate and timely forecasts.",
-      "imageUrl": "https://www.reuters.com/resizer/oWPatDlkSa911-uogNKqIdH16pk=/960x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/ZZMYUHCW7ZLCHNQKPNONETN3BY.jpg",
-      "fullArticle": "https://www.reuters.com/business/environment/india-boosts-ai-weather-forecasts-floods-droughts-increase-2023-12-22/",
-      "link": "https://www.reuters.com/business/environment/india-boosts-ai-weather-forecasts-floods-droughts-increase-2023-12-22/"
+      "title": "NASA’s Deep Space Network Turns 60 and Prepares for the Future",
+      "summary": "The agency’s DSN provides critical communications and navigation services to dozens of space missions, and it’s being modernized to support dozens more.",
+      "imageUrl": "https://www.nasa.gov/wp-content/uploads/2023/12/1-canberra-complex-05.jpg?resize=1536,864",
+      "fullArticle": "https://www.nasa.gov/technology/space-comms/deep-space-network/nasas-deep-space-network-turns-60-and-prepares-for-the-future/",
+      "link": "https://www.nasa.gov/technology/space-comms/deep-space-network/nasas-deep-space-network-turns-60-and-prepares-for-the-future/"
     }
   ],
   "latestNews": {
     "id": 0,
-    "title": "Salesforce Escaped from the Jaws of Activists to Find Stability in 2023 (TechCrunch)",
-    "summary": "After years of turmoil, Salesforce has emerged as a stronger company in 2023. The cloud computing giant has weathered a storm of activist investor pressure and executive turnover, and it is now well-positioned for continued growth in the years to come.",
-    "imageUrl": "https://techcrunch.com/wp-content/uploads/2023/12/GettyImages-10182027.jpg?resize=1200,886",
-    "fullArticle": "https://beamstart.com/news/salesforce-escaped-from-the-jaws-17034404941229",
-    "link": "https://beamstart.com/news/salesforce-escaped-from-the-jaws-17034404941229"
+    "title": "Crescent Moon Over NASA’s Kennedy Space Center",
+    "summary": "On Feb. 22, 2023, the crescent moon, Jupiter, and Venus were visible over NASA's Kennedy Space Center during preparations for the SpaceX Crew-6 mission.",
+    "imageUrl": "https://www.nasa.gov/wp-content/uploads/2024/01/52704988217-a8442a095c-o.jpg?resize=1605,2000",
+    "fullArticle": "https://www.nasa.gov/image-article/crescent-moon-over-nasas-kennedy-space-center/",
+    "link": "https://www.nasa.gov/image-article/crescent-moon-over-nasas-kennedy-space-center/"
   }
 }

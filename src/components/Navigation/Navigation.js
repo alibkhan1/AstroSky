@@ -35,7 +35,7 @@ const Navigation = ({ showFab = true }) => {
     {
       text: "News",
       icon: <NewspaperOutlinedIcon />,
-      path: "/tech-news",
+      path: "/space-news",
     },
     {
       text: "Map",
@@ -45,7 +45,7 @@ const Navigation = ({ showFab = true }) => {
     {
       text: "Missions",
       icon: <RocketLaunchOutlinedIcon />,
-      path: "/tech-missions",
+      path: "/space-missions",
     },
   ];
 

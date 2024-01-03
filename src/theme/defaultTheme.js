@@ -4,19 +4,19 @@ import typography from "./typography";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#A5907E",
+      main: "",
     },
     secondary: {
-      main: "#786452",
+      main: "#14171a",
     },
     background: {
-      default: "#F7DAD9",
+      default: "#fffff",
     },
     text: {
-      default: "#443730",
+      default: "#14171a",
     },
-    highlightColor: { default: "#786452" },
-    primaryBackground: { default: "#A5907E" },
+    highlightColor: { default: "#14171a" },
+    primaryBackground: { default: "#9ECFE7" },
   },
   typography,
 });

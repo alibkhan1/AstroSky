@@ -70,11 +70,11 @@ const App = () => {
               }
             />
             <Route
-              path="/tech-news"
+              path="/space-news"
               element={
                 <PageLayout
                   pageIcon={<NewspaperIcon />}
-                  pageTitle={"Tech News"}
+                  pageTitle={"Space News"}
                   isHighContrast={isHighContrast}
                 >
                   <News
@@ -85,11 +85,11 @@ const App = () => {
               }
             />
             <Route
-              path="/tech-missions"
+              path="/space-missions"
               element={
                 <PageLayout
                   pageIcon={<RocketLaunchOutlinedIcon />}
-                  pageTitle={"Tech Missions"}
+                  pageTitle={"Space Missions"}
                   isHighContrast={isHighContrast}
                 >
                   <TechMissionsPage

@@ -10,30 +10,29 @@ const HomePage = ({ captionsEnabled, isTextToSpeech }) => {
   const classes = useStyles();
 
   useEffect(() => {
-    const exampleImage = {
-      url: "https://images.pexels.com/photos/36753/flower-purple-lical-blosso.jpg",
-      media_type: "image",
-      explanation: "Example image description",
+    const fetchNASAImageOfTheDay = async () => {
+      try {
+        const response = await fetch(
+          "https://api.nasa.gov/planetary/apod?api_key=8oP0VlrZ7YoR5bcBVEGzywSGaz1zYjbPT2IqpVg1"
+        );
+        const data = await response.json();
+
+        // Check if the media type is an image or video
+        if (data.media_type === "image") {
+          setBackgroundMedia(data.url);
+        } else if (data.media_type === "video") {
+          // For video, you might want to handle it differently (e.g., display a placeholder image)
+          setBackgroundMedia("URL_TO_PLACEHOLDER_IMAGE");
+        }
+
+        setMediaType(data.media_type);
+        setBackgroundDescription(data.explanation);
+      } catch (error) {
+        console.error("Error fetching NASA Image of the Day:", error);
+      }
     };
 
-    const exampleVideo = {
-      url: "https://www.youtube.com/watch?v=RAnGpqrsSyc&ab_channel=ArtDeco",
-      media_type: "video",
-      explanation: "Example video description",
-    };
-
-    // Toggle between image and video for demonstration
-    const useImage = false; // Change to false to use the video example
-
-    if (useImage) {
-      setBackgroundMedia(exampleImage.url);
-      setMediaType(exampleImage.media_type);
-      setBackgroundDescription(exampleImage.explanation);
-    } else {
-      setBackgroundMedia(exampleVideo.url);
-      setMediaType(exampleVideo.media_type);
-      setBackgroundDescription(exampleVideo.explanation);
-    }
+    fetchNASAImageOfTheDay();
   }, []);
 
   useEffect(() => {
