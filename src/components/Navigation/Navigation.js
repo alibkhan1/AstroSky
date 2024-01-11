@@ -11,6 +11,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import HomeIcon from "@material-ui/icons/Home";
 import NewspaperOutlinedIcon from "@mui/icons-material/NewspaperOutlined";
 import GpsFixedOutlinedIcon from "@mui/icons-material/GpsFixedOutlined";
+import HelpIcon from '@mui/icons-material/Help';
 import RocketLaunchOutlinedIcon from "@mui/icons-material/RocketLaunchOutlined";
 import { Link } from "react-router-dom";
 import { useStyles } from "./Navigation.styles.js";
@@ -46,6 +47,11 @@ const Navigation = ({ showFab = true }) => {
       text: "Missions",
       icon: <RocketLaunchOutlinedIcon />,
       path: "/space-missions",
+    },
+    {
+      text: "About",
+      icon: <HelpIcon />,
+      path: "/about",
     },
   ];
 

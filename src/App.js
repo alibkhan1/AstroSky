@@ -11,7 +11,9 @@ import PageLayout from "./components/PageLayout/PageLayout";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
 import RocketLaunchOutlinedIcon from "@mui/icons-material/RocketLaunchOutlined";
 import GpsFixedOutlinedIcon from "@mui/icons-material/GpsFixedOutlined";
+import HelpIcon from '@mui/icons-material/Help';
 import MapPage from "./Views/Map/MapPage";
+import About from "./Views/About/About";
 const App = () => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isTextToSpeech, setIsTextToSpeech] = useState(false);
@@ -96,6 +98,18 @@ const App = () => {
                     readingLevel={readingLevel}
                     isTextToSpeech={isTextToSpeech}
                   />
+                </PageLayout>
+              }
+            />
+            <Route
+              path="/about"
+              element={
+                <PageLayout
+                  pageIcon={<HelpIcon />}
+                  pageTitle={"About"}
+                  isHighContrast={isHighContrast}
+                >
+                  <About/>
                 </PageLayout>
               }
             />
