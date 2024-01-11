@@ -4,13 +4,13 @@ import typography from "./typography";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "",
+      main: "#9ECFE7",
     },
     secondary: {
       main: "#14171a",
     },
     background: {
-      default: "#fffff",
+      default: "#FFFFFF",
     },
     text: {
       default: "#14171a",

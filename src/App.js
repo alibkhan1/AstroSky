@@ -16,7 +16,7 @@ const App = () => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isTextToSpeech, setIsTextToSpeech] = useState(false);
   const [captionsEnabled, setCaptionsEnabled] = useState(0);
-  const [readingLevel, setReadingLevel] = useState("easy");
+  const [readingLevel, setReadingLevel] = useState("medium");
 
   const toggleIsHighContrast = useCallback((event) => {
     setIsHighContrast(event.target.checked ?? false);
