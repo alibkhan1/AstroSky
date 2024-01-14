@@ -29,7 +29,7 @@ export const useBackgroundStyles = makeStyles((theme) => ({
   },
   backgroundDescription: {
     position: "absolute",
-    bottom: 0,
+    bottom: 20,
     left: "50%",
     transform: "translateX(-50%)",
     width: "calc(100% - 320px)",
