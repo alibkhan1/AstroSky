@@ -64,7 +64,7 @@ const App = () => {
               element={
                 <PageLayout
                   pageIcon={<GpsFixedOutlinedIcon />}
-                  pageTitle={"Map"}
+                  pageTitle={"Internation Space Station Tracking"}
                   isHighContrast={isHighContrast}
                 >
                   <MapPage />
