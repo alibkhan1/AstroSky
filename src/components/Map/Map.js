@@ -1,78 +1,82 @@
 import React, { useState, useEffect } from "react";
-import { useStyles } from "./Map.styles";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Polyline,
+  useMap,
+} from "react-leaflet";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+import customMarkerImg from "../../assets/logo.svg";
 
-const OpenStreetMapEmbed = () => {
-  const classes = useStyles();
-  const [coordinates, setCoordinates] = useState({
-    latitude: 51.505,
-    longitude: -0.09,
-  });
+const CustomMarkerIcon = new L.Icon({
+  iconUrl: customMarkerImg,
+  iconSize: [50, 82],
+  iconAnchor: [25, 50],
+  popupAnchor: [1, -34],
+});
 
-  useEffect(() => {
-    const fetchCoordinates = async () => {
-      try {
-        const res = await fetch("http://api.open-notify.org/iss-now.json");
+const UpdateMapCenter = ({ coordinates }) => {
+  const map = useMap();
+  map.setView(coordinates);
+  return null;
+};
 
-        const parsedRes = await res.json();
+const OpenStreetMapWithLeaflet = () => {
+  const [coordinates, setCoordinates] = useState({ lat: 51.505, lng: -0.09 });
+  const [path, setPath] = useState([]);
+  const [timestamp, setTimestamp] = useState("");
+  const zoomLevel = 3;
 
-        console.log(parsedRes);
+  const fetchISSCoordinates = async () => {
+    try {
+      const response = await fetch("http://api.open-notify.org/iss-now.json");
+      const data = await response.json();
+      const { latitude, longitude } = data.iss_position;
+      const newCoords = {
+        lat: parseFloat(latitude),
+        lng: parseFloat(longitude),
+      };
 
-        const Lat = parseFloat(parsedRes.iss_position.latitude);
-        const Long = parseFloat(parsedRes.iss_position.longitude);
-        console.log(Lat);
-        setCoordinates({
-          latitude: Lat,
-          longitude: Long,
-        });
-      } catch (error) {
-        console.error("Error fetching coordinates: ", error);
-      }
-    };
-
-    fetchCoordinates();
-  }, []);
-
-  const yourApiCallToFetchCoordinates = () => {
-    fetch("http://api.open-notify.org/iss-now.json").then((data) => {
-      console.log(data);
-      return data;
-    });
-    // return { latitude: 51.505, longitude: -0.09 };
+      setCoordinates(newCoords);
+      setPath((prevPath) => [...prevPath, newCoords]);
+      setTimestamp(new Date().toISOString()); // Current time in GMT
+    } catch (error) {
+      console.error("Error fetching ISS coordinates:", error);
+    }
   };
 
-  const mapSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${
-    coordinates.longitude - 0.01
-  }%2C${coordinates.latitude - 0.01}%2C${coordinates.longitude + 0.01}%2C${
-    coordinates.latitude + 0.01
-  }&layer=mapnik&marker=${coordinates.latitude}%2C${coordinates.longitude}`;
+  useEffect(() => {
+    fetchISSCoordinates();
+    const intervalId = setInterval(fetchISSCoordinates, 3000);
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <>
-      {" "}
-      <div
-        style={{
-          width: "100%",
-          height: "80vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
+      <MapContainer
+        center={coordinates}
+        zoom={zoomLevel}
+        style={{ height: "70vh", width: "100%", top: "30" }}
       >
-        <iframe
-          title="OpenStreetMap"
-          width="100%"
-          height="100%"
-          frameBorder="0"
-          scrolling="no"
-          marginHeight="0"
-          marginWidth="0"
-          src={mapSrc}
-          style={{ border: "none" }}
-        ></iframe>
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        />
+        <Marker position={coordinates} icon={CustomMarkerIcon}></Marker>
+        <Polyline positions={path} color="red" />
+        <UpdateMapCenter coordinates={coordinates} />
+      </MapContainer>
+      <div
+        style={{ textAlign: "center", marginTop: "20px", marginBottom: "70px" }}
+      >
+        <strong>Latitude:</strong> {coordinates.lat.toFixed(4)},{" "}
+        <strong>Longitude:</strong> {coordinates.lng.toFixed(4)},{" "}
+        <strong>Time (GMT):</strong> {timestamp}
       </div>
-      {/* <div classsName={classes.box}>Test</div> */}
     </>
   );
 };
 
-export default OpenStreetMapEmbed;
+export default OpenStreetMapWithLeaflet;
