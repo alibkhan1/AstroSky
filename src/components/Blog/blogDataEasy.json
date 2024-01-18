@@ -2,51 +2,51 @@
   "newsArticles": [
     {
       "id": 1,
-      "title": "OpenAI Might Get Lots of Money to Grow Bigger",
-      "summary": "OpenAI, who made a super smart robot that talks to you, is trying to get more money to become even bigger and better!",
-      "imageUrl": "https://s.yimg.com/ny/api/res/1.2/iNu7svdMAUtgIuSk1FjcKA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY0NDtjZj13ZWJw/https://media.zenfs.com/en/reuters-finance.com/6860d996d9998f88ca47863a6310bb9f",
-      "fullArticle": "https://finance.yahoo.com/news/openai-talks-raise-funding-100-212800503.html",
-      "link": "https://finance.yahoo.com/news/openai-talks-raise-funding-100-212800503.html"
+      "title": "NASA's Big Moon Robot Trip",
+      "summary": "On January 8, NASA is going to send a cool robot to the Moon! It will land there on February 23, and you can watch it on TV from January 4.",
+      "imageUrl": "https://www.nasa.gov/wp-content/uploads/2023/12/astrobotic-photo.jpg?resize=1536,1022",
+      "fullArticle": "https://www.nasa.gov/news-release/nasa-sets-coverage-for-ula-astrobotic-artemis-robotic-moon-launch/",
+      "link": "https://www.nasa.gov/news-release/nasa-sets-coverage-for-ula-astrobotic-artemis-robotic-moon-launch/"
     },
     {
       "id": 2,
-      "title": "Facebook's Big Company Gets a Time-out for Showing No-No Ads",
-      "summary": "Meta, the big company that owns Facebook, got a big 'Oops!' from Italy for showing people ads about games that should not be shown.",
-      "imageUrl": "https://www.reuters.com/resizer/W-QWC7Av4ki67-lrdqtkBOze4E4=/1200x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/U5ZRX2E37ZORVKWANHBURAMMGA.jpg",
-      "fullArticle": "https://www.reuters.com/technology/meta-hit-by-record-12-bln-euro-fine-by-eu-over-us-data-transfers-2023-05-22/",
-      "link": "https://www.reuters.com/technology/meta-hit-by-record-12-bln-euro-fine-by-eu-over-us-data-transfers-2023-05-22/"
+      "title": "NASA's Spacecraft Visits a Fiery Moon",
+      "summary": "NASA's spaceship called Juno is going to visit Jupiter's fiery moon Io on December 30. It's the closest visit in over 20 years!",
+      "imageUrl": "https://www.nasa.gov/wp-content/uploads/2023/12/1-pia26234-io-flyby-image2.jpg?resize=1481,1536",
+      "fullArticle": "https://www.nasa.gov/missions/juno/nasas-juno-to-get-close-look-at-jupiters-volcanic-moon-io-on-dec-30/",
+      "link": "https://www.nasa.gov/missions/juno/nasas-juno-to-get-close-look-at-jupiters-volcanic-moon-io-on-dec-30/"
     },
     {
       "id": 3,
-      "title": "The Leaders Want More Electric Cars to Zoom Around!",
-      "summary": "President Biden and his friends have a plan to make more electric cars that don't need gas to go. They hope a lot of people will choose these cool, quiet cars.",
-      "imageUrl": "https://media.cnn.com/api/v1/images/stellar/prod/220714163144-embargoed-01-gm-chevy-blazer-suv.jpg?q=w_1110,c_fill/f_webp",
-      "fullArticle": "https://www.cnn.com/2023/04/12/business/electric-car-regulations-response/index.html",
-      "link": "https://www.cnn.com/2023/04/12/business/electric-car-regulations-response/index.html"
+      "title": "Space Telescope Sees a Faraway Planet",
+      "summary": "A big space camera called the James Webb Space Telescope took a picture of a faraway planet named Uranus. It's really pretty with rings and stormy spots!",
+      "imageUrl": "https://www.nasa.gov/wp-content/uploads/2023/12/53404881117-64e0071ca0-o.png?resize=1536,1299",
+      "fullArticle": "https://www.nasa.gov/image-article/ringing-in-the-holidays/",
+      "link": "https://www.nasa.gov/image-article/ringing-in-the-holidays/"
     },
     {
       "id": 4,
-      "title": "Microsoft's New Helper is Like a Super Smart Paperclip",
-      "summary": "Microsoft has a new helper for people who make computer stuff. It's really smart, like a superhero version of Clippy, the paperclip friend we used to have on the computer!",
-      "imageUrl": "https://www.technewsworld.com/wp-content/uploads/sites/3/2023/10/Microsoft-Copilot.jpg",
-      "fullArticle": "https://www.technewsworld.com/story/microsofts-copilot-rises-from-the-ashes-of-bob-and-clippy-178799.html",
-      "link": "https://www.technewsworld.com/story/microsofts-copilot-rises-from-the-ashes-of-bob-and-clippy-178799.html"
+      "title": "Webb: The Super Space Camera",
+      "summary": "Webb is a very special space camera that can see far, far into space. It's like a superhero camera because it learned from older space cameras!",
+      "imageUrl": "https://www.nasa.gov/wp-content/uploads/2023/12/1-pia25790-infrared-telescopes.png?resize=1536,859",
+      "fullArticle": "https://www.nasa.gov/universe/meet-the-infrared-telescopes-that-paved-the-way-for-nasas-webb/",
+      "link": "https://www.nasa.gov/universe/meet-the-infrared-telescopes-that-paved-the-way-for-nasas-webb/"
     },
     {
       "id": 5,
-      "title": "India Uses Robot Brains to Predict Sunshine and Rain",
-      "summary": "India is using robot brains to guess the weather better, so they can tell if there will be too much rain or not enough. This helps everyone get ready for what's coming!",
-      "imageUrl": "https://www.reuters.com/resizer/oWPatDlkSa911-uogNKqIdH16pk=/960x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/ZZMYUHCW7ZLCHNQKPNONETN3BY.jpg",
-      "fullArticle": "https://www.reuters.com/business/environment/india-boosts-ai-weather-forecasts-floods-droughts-increase-2023-12-22/",
-      "link": "https://www.reuters.com/business/environment/india-boosts-ai-weather-forecasts-floods-droughts-increase-2023-12-22/"
+      "title": "NASA's Big Space Phone is 60 Years Old!",
+      "summary": "NASA has a big space phone called the Deep Space Network. It talks to spaceships and is 60 years old now. It's getting better to talk to more spaceships!",
+      "imageUrl": "https://www.nasa.gov/wp-content/uploads/2023/12/1-canberra-complex-05.jpg?resize=1536,864",
+      "fullArticle": "https://www.nasa.gov/technology/space-comms/deep-space-network/nasas-deep-space-network-turns-60-and-prepares-for-the-future/",
+      "link": "https://www.nasa.gov/technology/space-comms/deep-space-network/nasas-deep-space-network-turns-60-and-prepares-for-the-future/"
     }
   ],
   "latestNews": {
     "id": 0,
-    "title": "Salesforce Becomes Super Strong After a Big Storm",
-    "summary": "Salesforce, a giant cloud company, has become super strong after going through a lot of tough times. Now it's ready to grow big and tall like a tree!",
-    "imageUrl": "https://techcrunch.com/wp-content/uploads/2023/12/GettyImages-10182027.jpg?resize=1200,886",
-    "fullArticle": "https://beamstart.com/news/salesforce-escaped-from-the-jaws-17034404941229",
-    "link": "https://beamstart.com/news/salesforce-escaped-from-the-jaws-17034404941229"
+    "title": "Night Sky Show at NASA's Space Center",
+    "summary": "On February 22, 2023, people saw the moon smiling and two bright stars, Jupiter and Venus, in the sky over NASA's place where they build spaceships.",
+    "imageUrl": "https://www.nasa.gov/wp-content/uploads/2024/01/52704988217-a8442a095c-o.jpg?resize=1605,2000",
+    "fullArticle": "https://www.nasa.gov/image-article/crescent-moon-over-nasas-kennedy-space-center/",
+    "link": "https://www.nasa.gov/image-article/crescent-moon-over-nasas-kennedy-space-center/"
   }
 }

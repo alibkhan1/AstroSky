@@ -15,7 +15,7 @@ const theme = createTheme({
     text: {
       default: "#14171a",
     },
-    highlightColor: { default: "#14171a" },
+    highlightColor: { default: "#869BFF" },
     primaryBackground: { default: "#9ECFE7" },
   },
   typography,

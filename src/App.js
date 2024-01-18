@@ -109,7 +109,7 @@ const App = () => {
                   pageTitle={"About"}
                   isHighContrast={isHighContrast}
                 >
-                  <About/>
+                  <About isTextToSpeech={isTextToSpeech}/>
                 </PageLayout>
               }
             />
