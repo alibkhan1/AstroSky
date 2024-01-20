@@ -31,9 +31,14 @@ const OpenStreetMapWithLeaflet = () => {
 
   const fetchISSCoordinates = async () => {
     try {
-      const response = await fetch("http://api.open-notify.org/iss-now.json");
+      // Update the API endpoint to the "Where The ISS At" API
+      const response = await fetch(
+        "https://api.wheretheiss.at/v1/satellites/25544"
+      );
       const data = await response.json();
-      const { latitude, longitude } = data.iss_position;
+
+      // Update the property names according to the new API's response structure
+      const { latitude, longitude } = data;
       const newCoords = {
         lat: parseFloat(latitude),
         lng: parseFloat(longitude),

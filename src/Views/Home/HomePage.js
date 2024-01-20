@@ -16,15 +16,7 @@ const HomePage = ({ captionsEnabled, isTextToSpeech }) => {
           "https://api.nasa.gov/planetary/apod?api_key=8oP0VlrZ7YoR5bcBVEGzywSGaz1zYjbPT2IqpVg1"
         );
         const data = await response.json();
-
-        // Check if the media type is an image or video
-        if (data.media_type === "image") {
-          setBackgroundMedia(data.url);
-        } else if (data.media_type === "video") {
-          // For video, you might want to handle it differently (e.g., display a placeholder image)
-          setBackgroundMedia("URL_TO_PLACEHOLDER_IMAGE");
-        }
-
+        setBackgroundMedia(data.url);
         setMediaType(data.media_type);
         setBackgroundDescription(data.explanation);
       } catch (error) {
