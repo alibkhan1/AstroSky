@@ -1,6 +1,6 @@
 import React from "react";
 import { useBackgroundStyles } from './Background.styles';
-
+import Clock from "../Clock/Clock";
 const Background = ({
   mediaType,
   backgroundMedia,
@@ -48,6 +48,8 @@ const Background = ({
   return (
     <>
       {renderBackground()}
+      <Clock/>
+
       <div className={classes.backgroundDescription}>
         {backgroundDescription}
       </div>
