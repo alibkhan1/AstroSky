@@ -59,8 +59,9 @@ const Clock = () => {
     };
 
     return (
+        <div>
+            {/* {!!isDesktop && ( */}
         <div style={clockStyle}>
-            {!!isDesktop && (
                 <div style={{ display: 'block' }}>
                     <span style={{ display: 'block', color:"white" }}>{currentTime}</span>
                     <span style={{ display: 'block', color:"white" }}>
@@ -68,8 +69,9 @@ const Clock = () => {
                     </span>
                 </div>
 
-            )}
-        </div>
+                </div>
+                // )}
+                </div>
     );
 };
 
