@@ -12,8 +12,10 @@ import NewspaperIcon from "@mui/icons-material/Newspaper";
 import RocketLaunchOutlinedIcon from "@mui/icons-material/RocketLaunchOutlined";
 import GpsFixedOutlinedIcon from "@mui/icons-material/GpsFixedOutlined";
 import HelpIcon from '@mui/icons-material/Help';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import MapPage from "./Views/Map/MapPage";
 import About from "./Views/About/About";
+import SponsorsPage from "./Views/Sponsors/SponsorsPage";
 const App = () => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isTextToSpeech, setIsTextToSpeech] = useState(false);
@@ -110,6 +112,18 @@ const App = () => {
                   isHighContrast={isHighContrast}
                 >
                   <About isTextToSpeech={isTextToSpeech}/>
+                </PageLayout>
+              }
+            />
+             <Route
+              path="/sponsors"
+              element={
+                <PageLayout
+                  pageIcon={<AttachMoneyIcon />}
+                  pageTitle={"Our Sponsors"}
+                  isHighContrast={isHighContrast}
+                >
+                  <SponsorsPage />
                 </PageLayout>
               }
             />

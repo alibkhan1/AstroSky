@@ -12,6 +12,7 @@ import HomeIcon from "@material-ui/icons/Home";
 import NewspaperOutlinedIcon from "@mui/icons-material/NewspaperOutlined";
 import GpsFixedOutlinedIcon from "@mui/icons-material/GpsFixedOutlined";
 import HelpIcon from '@mui/icons-material/Help';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import RocketLaunchOutlinedIcon from "@mui/icons-material/RocketLaunchOutlined";
 import { Link } from "react-router-dom";
 import { useStyles } from "./Navigation.styles.js";
@@ -52,6 +53,11 @@ const Navigation = ({ showFab = true }) => {
       text: "About",
       icon: <HelpIcon />,
       path: "/about",
+    },
+    {
+      text: "Sponsors",
+      icon: <AttachMoneyIcon />,
+      path: "/sponsors",
     },
   ];
 
