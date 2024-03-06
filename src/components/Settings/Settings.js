@@ -8,7 +8,7 @@ import {
   Fab,
   Switch,
 } from "@material-ui/core";
-import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
 import HearingOutlinedIcon from "@mui/icons-material/HearingOutlined";
 import RecordVoiceOverOutlinedIcon from "@mui/icons-material/RecordVoiceOverOutlined";
 import VisibilityOffOutlinedIcon from "@mui/icons-material/VisibilityOffOutlined";
@@ -104,7 +104,7 @@ const SettingsMenu = ({
         aria-label="add"
         onClick={toggleDrawer(true)}
       >
-        <SettingsOutlinedIcon />
+        <AccessibilityNewIcon />
       </Fab>
       <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
         {drawerList()}
