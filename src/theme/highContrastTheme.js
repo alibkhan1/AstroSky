@@ -13,7 +13,7 @@ const highContrastTheme = createTheme({
       default: "#949494",
     },
     text: {
-      default: "#232323",
+      default: "#ffffff",
     },
     highlightColor: { default: "#676767" },
     primaryBackground: { default: "#515151" },

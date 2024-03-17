@@ -13,6 +13,7 @@ import NewspaperOutlinedIcon from "@mui/icons-material/NewspaperOutlined";
 import GpsFixedOutlinedIcon from "@mui/icons-material/GpsFixedOutlined";
 import HelpIcon from '@mui/icons-material/Help';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import QuizIcon from '@mui/icons-material/Quiz';
 import RocketLaunchOutlinedIcon from "@mui/icons-material/RocketLaunchOutlined";
 import { Link } from "react-router-dom";
 import { useStyles } from "./Navigation.styles.js";
@@ -58,6 +59,11 @@ const Navigation = ({ showFab = true }) => {
       text: "Sponsors",
       icon: <AttachMoneyIcon />,
       path: "/sponsors",
+    },
+    {
+      text: "Astronomy Quiz",
+      icon: <QuizIcon />,
+      path: "/Quiz",
     },
   ];
 

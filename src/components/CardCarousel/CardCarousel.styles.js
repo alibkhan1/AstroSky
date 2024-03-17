@@ -77,6 +77,7 @@ export const useStyles = makeStyles((theme) => ({
     height: "12px",
   },
   readMore: {
+    color: theme.palette.text.default,
     backgroundColor: theme.palette.primaryBackground.default,
     "&:hover": {
       backgroundColor: theme.palette.highlightColor.default,

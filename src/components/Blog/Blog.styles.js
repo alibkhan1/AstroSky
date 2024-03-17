@@ -42,6 +42,7 @@ export const useBlogStyles = makeStyles((theme) => ({
     },
   },
   readMore: {
+    color: theme.palette.text.default,
     backgroundColor: theme.palette.primaryBackground.default,
     "&:hover": {
       backgroundColor: theme.palette.highlightColor.default,

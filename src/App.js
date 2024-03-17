@@ -13,9 +13,11 @@ import RocketLaunchOutlinedIcon from "@mui/icons-material/RocketLaunchOutlined";
 import GpsFixedOutlinedIcon from "@mui/icons-material/GpsFixedOutlined";
 import HelpIcon from '@mui/icons-material/Help';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import QuizIcon from '@mui/icons-material/Quiz';
 import MapPage from "./Views/Map/MapPage";
 import About from "./Views/About/About";
 import SponsorsPage from "./Views/Sponsors/SponsorsPage";
+import QuizPage from "./Views/Quiz/QuizPage";
 const App = () => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isTextToSpeech, setIsTextToSpeech] = useState(false);
@@ -126,6 +128,18 @@ const App = () => {
                   <SponsorsPage />
                 </PageLayout>
               }
+            />
+              <Route
+               path="/Quiz"
+               element={
+                 <PageLayout
+                   pageIcon={<QuizIcon/>}
+                   pageTitle={"Astronomy Quiz"}
+                   isHighContrast={isHighContrast}
+                 >
+                   <QuizPage />
+                 </PageLayout>
+               }
             />
           </Routes>
         </div>
