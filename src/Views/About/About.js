@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import TeamPicture from "../../assets/TeamPicture.png";
-import TeamPicture2 from "../../assets/TeamPicture2.png";
+import teamPhoto from "../../assets/teamPhoto.jpeg";
+import teamCelebration from "../../assets/team-celebration.jpeg";
 import { useAboutStyles } from './About.styles';
 import { Container } from "@material-ui/core";
 
@@ -25,16 +25,16 @@ const About = ({ isTextToSpeech }) => {
       <div className={classes.container}>
         <div className={classes.imageContainer}>
           <img
-            src={TeamPicture2}
+            src={teamPhoto}
             alt="Space ship"
-            className={classes.teamPicture}
+            className={classes.teamPhoto}
           />
         </div>
         <div className={classes.imageContainer}>
           <img
-            src={TeamPicture}
+            src={teamCelebration}
             alt="Space ship"
-            className={classes.teamPicture}
+            className={classes.teamCelebration}
           />
         </div>
       </div>

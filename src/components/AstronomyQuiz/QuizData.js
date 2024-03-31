@@ -43,7 +43,7 @@ export const QuizData = [
       "The Sun moving behind the Earth",
       "A comet passing between the Sun and the Earth",
     ],
-    answer: "The Earth moving between the Sun and the Moon",
+    answer:  "The Moon passes between the Sun and Earth",
   },
   {
     question: "Which planet is known as the Red Planet?",
