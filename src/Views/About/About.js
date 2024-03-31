@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import teamPhoto from "../../assets/teamPhoto.jpeg";
-import teamCelebration from "../../assets/team-celebration.jpeg";
+import teamPhoto from "../../assets/teamPhoto.png";
+import teamCelebration from "../../assets/teamCelebration.png";
 import { useAboutStyles } from './About.styles';
 import { Container } from "@material-ui/core";
 
