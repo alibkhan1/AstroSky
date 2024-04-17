@@ -1,6 +1,9 @@
-import React from "react";
-import { useBackgroundStyles } from './Background.styles';
+import React, { useState } from "react";
+import { useBackgroundStyles } from "./Background.styles";
 import Clock from "../Clock/Clock";
+import Tooltip from "@material-ui/core/Tooltip"; // Import Tooltip
+import InfoIcon from "@material-ui/icons/Info"; // Import Info icon
+
 const Background = ({
   mediaType,
   backgroundMedia,
@@ -8,6 +11,10 @@ const Background = ({
   captionsEnabled,
 }) => {
   const classes = useBackgroundStyles();
+  const [open, setOpen] = useState(false);
+  const handleTooltipToggle = () => {
+    setOpen(!open);
+  };
 
   const getYouTubeEmbedUrl = (url) => {
     const regExp = /^.*(youtu.be\/|v\/|e\/|u\/\w+\/|embed\/|v=)([^#\&\?]*).*/;
@@ -48,11 +55,18 @@ const Background = ({
   return (
     <>
       {renderBackground()}
-      <Clock/>
-
-      <div className={classes.backgroundDescription}>
-        {backgroundDescription}
-      </div>
+      <Clock />
+      <Tooltip
+        title={backgroundDescription}
+        className={classes.backgroundDescription}
+        open={open}
+        disableFocusListener
+        disableHoverListener
+        disableTouchListener
+        onClick={handleTooltipToggle}
+      >
+        <InfoIcon style={{ color: "white", fontSize: 50, cursor: "pointer" }} />
+      </Tooltip>
     </>
   );
 };

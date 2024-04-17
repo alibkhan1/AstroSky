@@ -29,11 +29,8 @@ const ReadingLevelsForm = ({ readingLevel, onFormSubmit }) => {
         <MenuItem value="easy" className={classes.menuItem}>
           Easy
         </MenuItem>
-        <MenuItem value="medium" className={classes.menuItem}>
-          Medium
-        </MenuItem>
-        <MenuItem value="hard" className={classes.menuItem}>
-          Hard
+        <MenuItem value="regular" className={classes.menuItem}>
+          Regular
         </MenuItem>
       </Select>
     </FormControl>

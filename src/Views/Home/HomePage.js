@@ -13,7 +13,7 @@ const HomePage = ({ captionsEnabled, isTextToSpeech }) => {
     const fetchNASAImageOfTheDay = async () => {
       try {
         const response = await fetch(
-          "https://api.nasa.gov/planetary/apod?api_key=8oP0VlrZ7YoR5bcBVEGzywSGaz1zYjbPT2IqpVg1"
+          `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_APOD_KEY}`
         );
         const data = await response.json();
         setBackgroundMedia(data.url);
@@ -28,6 +28,7 @@ const HomePage = ({ captionsEnabled, isTextToSpeech }) => {
   }, []);
 
   useEffect(() => {
+    window.speechSynthesis.cancel();
     if (isTextToSpeech) {
       const speech = new SpeechSynthesisUtterance(backgroundDescription);
       speech.lang = "en-US";
@@ -38,6 +39,9 @@ const HomePage = ({ captionsEnabled, isTextToSpeech }) => {
     } else {
       window.speechSynthesis.cancel();
     }
+    return () => {
+      window.speechSynthesis.cancel();
+    };
   }, [isTextToSpeech, backgroundDescription]);
 
   return (

@@ -11,74 +11,96 @@ import {
   Container,
   CardActions,
   Button,
+  CircularProgress,
 } from "@material-ui/core";
-import blogData from "./blogData.json";
-import blogDataEasy from "./blogDataEasy.json";
-import blogDataHard from "./blogDataHard.json";
 
 const Blog = ({ readingLevel, isTextToSpeech }) => {
   const classes = useBlogStyles();
   const [newsArticles, setNews] = useState([]);
   const [latestNews, setLatestNews] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    if (readingLevel === "easy") {
-      setNews(blogDataEasy.newsArticles);
-      setLatestNews(blogDataEasy.latestNews);
-    } else if (readingLevel === "hard") {
-      setNews(blogDataHard.newsArticles);
-      setLatestNews(blogDataHard.latestNews);
-    } else {
-      setNews(blogData.newsArticles);
-      setLatestNews(blogData.latestNews);
+  const fetchData = async () => {
+    setIsLoading(true);
+    try {
+      const url = `https://assets.astrosky.org/${
+        readingLevel === "easy" ? "simplified-articles" : "articles"
+      }.json`;
+      const response = await fetch(url);
+      const data = await response.json();
+      if (data && data.length > 0) {
+        setLatestNews(data[0]);
+        setNews(data.slice(1));
+      }
+    } catch (error) {
+      console.error("Failed to fetch data:", error);
     }
-  }, [readingLevel]);
-
-  const speakAllArticles = () => {
-    if (isTextToSpeech) {
-      let allTexts = latestNews.title + ". " + latestNews.summary;
-      newsArticles.forEach((article) => {
-        allTexts += " " + article.title + ". " + article.summary;
-      });
-      const utterance = new SpeechSynthesisUtterance(allTexts);
-      window.speechSynthesis.speak(utterance);
-    }
+    setIsLoading(false);
   };
 
   useEffect(() => {
-    if (isTextToSpeech) {
-      speakAllArticles();
-    } else {
+    fetchData();
+  }, [readingLevel]);
+
+  useEffect(() => {
+    const speakAllArticles = () => {
+      if (isTextToSpeech && latestNews && newsArticles.length) {
+        let allTexts = latestNews.title + ". " + latestNews.summary;
+        newsArticles.forEach((article) => {
+          allTexts += " " + article.title + ". " + article.summary;
+        });
+        const utterance = new SpeechSynthesisUtterance(allTexts);
+        window.speechSynthesis.speak(utterance);
+      }
+    };
+
+    speakAllArticles();
+
+    return () => {
       window.speechSynthesis.cancel();
-    }
+    };
   }, [isTextToSpeech, latestNews, newsArticles]);
+
+  if (isLoading) {
+    return (
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        minHeight="100vh"
+      >
+        <CircularProgress />
+      </Box>
+    );
+  }
 
   return (
     <Container maxWidth="lg">
       <Box className={classes.root}>
         <Grid container spacing={3}>
+          {/* Latest News Section */}
           <Grid item xs={12} md={4} className={classes.latestNewsSection}>
             <Typography variant="h4" className={classes.newsTitle}>
               Latest News
             </Typography>
             {latestNews && (
-              <Card key={blogData.latestNews.id} className={classes.newsItem}>
-                <CardActionArea className={classes.cardActionArea}>
+              <Card key={latestNews.id} className={classes.newsItem}>
+                <CardActionArea>
                   <CardMedia
                     className={classes.media}
-                    image={blogData.latestNews.imageUrl}
-                    title={blogData.latestNews.title}
+                    image={latestNews.image_url}
+                    title={latestNews.title}
                   />
                   <CardContent>
                     <Typography variant="h5" component="h2">
-                      {blogData.latestNews.title}
+                      {latestNews.title}
                     </Typography>
                     <Typography
                       variant="body2"
                       color="textSecondary"
                       component="p"
                     >
-                      {blogData.latestNews.summary}
+                      {latestNews.summary}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -88,7 +110,7 @@ const Blog = ({ readingLevel, isTextToSpeech }) => {
                     className={classes.readMore}
                     onClick={() =>
                       window.open(
-                        blogData.latestNews.link,
+                        latestNews.url,
                         "_blank",
                         "noopener,noreferrer"
                       )
@@ -101,6 +123,7 @@ const Blog = ({ readingLevel, isTextToSpeech }) => {
             )}
           </Grid>
 
+          {/* News Section */}
           <Grid item xs={12} md={8} className={classes.newsSection}>
             <Typography variant="h4" className={classes.newsTitle}>
               News
@@ -110,7 +133,7 @@ const Blog = ({ readingLevel, isTextToSpeech }) => {
                 <CardActionArea>
                   <CardMedia
                     className={classes.media}
-                    image={article.imageUrl}
+                    image={article.image_url}
                     title={article.title}
                   />
                   <CardContent>
@@ -136,7 +159,7 @@ const Blog = ({ readingLevel, isTextToSpeech }) => {
                   <Button
                     size="small"
                     className={classes.readMore}
-                    href={article.link}
+                    href={article.url}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

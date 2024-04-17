@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import HomeIcon from "@material-ui/icons/Home";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 import NewspaperOutlinedIcon from "@mui/icons-material/NewspaperOutlined";
 import GpsFixedOutlinedIcon from "@mui/icons-material/GpsFixedOutlined";
 import HelpIcon from '@mui/icons-material/Help';
@@ -63,7 +64,12 @@ const Navigation = ({ showFab = true }) => {
     {
       text: "Astronomy Quiz",
       icon: <QuizIcon />,
-      path: "/Quiz",
+      path: "/quiz",
+    },
+    {
+      text: "Lunar Calendar",
+      icon: <DarkModeIcon />,
+      path: "/calendar",
     },
   ];
 

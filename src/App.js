@@ -14,7 +14,9 @@ import GpsFixedOutlinedIcon from "@mui/icons-material/GpsFixedOutlined";
 import HelpIcon from '@mui/icons-material/Help';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import QuizIcon from '@mui/icons-material/Quiz';
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 import MapPage from "./Views/Map/MapPage";
+import Events from "./Views/Calendar/Calendar";
 import About from "./Views/About/About";
 import SponsorsPage from "./Views/Sponsors/SponsorsPage";
 import QuizPage from "./Views/Quiz/QuizPage";
@@ -22,7 +24,7 @@ const App = () => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isTextToSpeech, setIsTextToSpeech] = useState(false);
   const [captionsEnabled, setCaptionsEnabled] = useState(0);
-  const [readingLevel, setReadingLevel] = useState("medium");
+  const [readingLevel, setReadingLevel] = useState("regular");
 
   const toggleIsHighContrast = useCallback((event) => {
     setIsHighContrast(event.target.checked ?? false);
@@ -113,11 +115,11 @@ const App = () => {
                   pageTitle={"About"}
                   isHighContrast={isHighContrast}
                 >
-                  <About isTextToSpeech={isTextToSpeech}/>
+                  <About isTextToSpeech={isTextToSpeech} />
                 </PageLayout>
               }
             />
-             <Route
+            <Route
               path="/sponsors"
               element={
                 <PageLayout
@@ -129,17 +131,29 @@ const App = () => {
                 </PageLayout>
               }
             />
-              <Route
-               path="/Quiz"
-               element={
-                 <PageLayout
-                   pageIcon={<QuizIcon/>}
-                   pageTitle={"Astronomy Quiz"}
-                   isHighContrast={isHighContrast}
-                 >
-                   <QuizPage />
-                 </PageLayout>
-               }
+            <Route
+              path="/quiz"
+              element={
+                <PageLayout
+                  pageIcon={<QuizIcon />}
+                  pageTitle={"Astronomy Quiz"}
+                  isHighContrast={isHighContrast}
+                >
+                  <QuizPage isTextToSpeech={isTextToSpeech} />
+                </PageLayout>
+              }
+            />
+            <Route
+              path="/calendar"
+              element={
+                <PageLayout
+                  pageIcon={<DarkModeIcon />}
+                  pageTitle={"Events"}
+                  isHighContrast={isHighContrast}
+                >
+                  <Events isTextToSpeech={isTextToSpeech} />
+                </PageLayout>
+              }
             />
           </Routes>
         </div>

@@ -1,15 +1,35 @@
-import { QuizData } from "./QuizData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useQuizStyles } from "./quiz.styles";
+import { QuizData } from "./QuizData";
 
-
-const Quiz = () => {
+const Quiz = ({ isTextToSpeech }) => {
   const classes = useQuizStyles();
   const [currentSelection, setCurrentSelection] = useState("");
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [endOfQuiz, setEndOfQuiz] = useState(false);
   const [incorrectAnswers, setIncorrectAnswers] = useState([]);
+
+  useEffect(() => {
+    if (isTextToSpeech) {
+      const question = QuizData[currentQuestion].question;
+      const options = QuizData[currentQuestion].options.join(", ");
+      const textToSpeak = `Question ${
+        currentQuestion + 1
+      }: ${question}. Options are: ${options}.`;
+
+      const speechSynthesisUtterance = new SpeechSynthesisUtterance(
+        textToSpeak
+      );
+      window.speechSynthesis.speak(speechSynthesisUtterance);
+    }
+
+    // Cleanup function to stop speech synthesis when navigating away or moving to the next question
+    return () => {
+      window.speechSynthesis.cancel();
+    };
+  }, [currentQuestion, isTextToSpeech]);
+
   const handleFormSelection = (event) => {
     setCurrentSelection(event.target.value);
   };
@@ -36,13 +56,14 @@ const Quiz = () => {
       setEndOfQuiz(true);
     }
   };
+
   return (
     <>
       {endOfQuiz ? (
         <>
           <h1 className={classes.heading}>End of Quiz! </h1>
           <div className={classes.quizCard}>
-            <div> Your Score: {score} </div>
+            <h2> Your Score: {score} </h2>
             {incorrectAnswers.length > 0 ? (
               <div>
                 <h2> Incorrect Answers</h2>

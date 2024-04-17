@@ -2,86 +2,74 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
   root: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
     flexGrow: 1,
-    position: "relative",
-    backgroundColor: theme.palette.primaryBackground.default,
-    padding: theme.spacing(4),
+    marginTop:'7.5%',
+    backgroundColor: theme.palette.background.default,
+    boxShadow: "0 0 10px rgba(158, 207, 231, 1)",
+    borderRadius: "10px",
+    overflow: "auto",
   },
   gridContainer: {
-    maxWidth: "80%",
-    margin: "0 auto",
+    width: "80%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    marginBottom: theme.spacing(2),
     [theme.breakpoints.down("xs")]: {
-      maxWidth: "100%",
+      width: "100%",
     },
   },
   card: {
-    overflow: "scroll",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     padding: theme.spacing(2),
     backgroundColor: theme.palette.background.default,
-    border: `2px solid ${theme.palette.divider}`,
+    border: `1px solid ${theme.palette.divider}`,
     borderRadius: theme.shape.borderRadius,
     boxShadow: theme.shadows[3],
+    "&:not(:last-child)": {
+      marginBottom: theme.spacing(2),
+    },
     [theme.breakpoints.up("sm")]: {
-      height: 260,
+      height: 280,
     },
     [theme.breakpoints.down("xs")]: {
-      height: 160,
+      height: "auto",
     },
   },
   media: {
-    height: 140,
+    height: 150,
   },
   stepper: {
-    backgroundColor: theme.palette.primaryBackground.default,
-    position: "absolute",
-    borderRadius: "15px",
-    left: "50%",
-    transform: "translateX(-50%)",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
+    width: "90%",
+    marginTop: theme.spacing(2),
+    [theme.breakpoints.down("xs")]: {
+      bottom: theme.spacing(1),
+    },
   },
   button: {
-    padding: theme.spacing(1),
-    position: "absolute",
-    top: "50%",
-    [theme.breakpoints.up("xs")]: {
-      top: "96%",
-    },
-    transform: "translateY(-50%)",
-    backgroundColor: theme.palette.primaryBackground.default,
+    marginBottom: theme.spacing(2),
+    backgroundColor: theme.palette.primary.main,
     "&:hover": {
       backgroundColor: theme.palette.highlightColor.default,
     },
-    "&.left": {
-      left: theme.spacing(1),
-    },
-    "&.right": {
-      right: theme.spacing(1),
-    },
   },
   dot: {
-    backgroundColor: theme.palette.background.default,
-    width: "10px",
-    height: "10px",
+    backgroundColor: theme.palette.action.disabledBackground,
+    width: 10,
+    height: 10,
     margin: "0 6px",
   },
   dotActive: {
     backgroundColor: theme.palette.highlightColor.default,
-    width: "12px",
-    height: "12px",
-  },
-  readMore: {
-    color: theme.palette.text.default,
-    backgroundColor: theme.palette.primaryBackground.default,
-    "&:hover": {
-      backgroundColor: theme.palette.highlightColor.default,
-    },
+    width: 12,
+    height: 12,
   },
 }));
 

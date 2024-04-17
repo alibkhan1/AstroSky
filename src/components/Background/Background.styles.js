@@ -29,20 +29,9 @@ export const useBackgroundStyles = makeStyles((theme) => ({
   },
   backgroundDescription: {
     position: "absolute",
-    bottom: 20,
-    left: "50%",
+    fontSize: "2rem",
+    top: 20,
+    right: 10,
     transform: "translateX(-50%)",
-    width: "calc(100% - 320px)",
-    height: "120px",
-    overflowY: "auto",
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
-    color: "white",
-    padding: "10px",
-    boxSizing: "border-box",
-    borderTopLeftRadius: "10px",
-    borderTopRightRadius: "10px",
-    "@media (max-width: 600px)": {
-      width: "calc(100% - 140px)",
-    },
   },
 }));
