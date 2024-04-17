@@ -16,7 +16,7 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import QuizIcon from '@mui/icons-material/Quiz';
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import MapPage from "./Views/Map/MapPage";
-import Events from "./Views/Calendar/Calendar";
+import Calendar from "./Views/Calendar/Calendar";
 import About from "./Views/About/About";
 import SponsorsPage from "./Views/Sponsors/SponsorsPage";
 import QuizPage from "./Views/Quiz/QuizPage";
@@ -148,10 +148,10 @@ const App = () => {
               element={
                 <PageLayout
                   pageIcon={<DarkModeIcon />}
-                  pageTitle={"Events"}
+                  pageTitle={"Lunar Calendar"}
                   isHighContrast={isHighContrast}
                 >
-                  <Events isTextToSpeech={isTextToSpeech} />
+                  <Calendar isTextToSpeech={isTextToSpeech} />
                 </PageLayout>
               }
             />
