@@ -3,6 +3,7 @@ import Aymin from '../../assets/SponsorLogos/Aymin.jpg';
 import Urology from '../../assets/SponsorLogos/Urology.jpg';
 import Urgent from '../../assets/SponsorLogos/UrgentCare.jpg';
 import goddardSchool from '../../assets/SponsorLogos/goddardSchool.png';
+import LiveActive from '../../assets/SponsorLogos/LiveActive.jpeg';
 import Sponsors from '../../components/Sponsors/Sponsors.js';
 
 
@@ -15,6 +16,7 @@ const SponsorPage = () => {
     { name: 'KU Urology', logo: Urology }, // Logo stored in the code base
     { name: 'Urgent Care of Kansas', logo: Urgent }, // Logo stored in the code base
     { name: 'The Goddard School', logo: goddardSchool }, // Logo stored in the code base
+    { name: 'LiveActive Primary Care', logo: LiveActive }, // Logo stored in the code base
   ];
 
   return <Sponsors sponsorData={sponsorData} />;
