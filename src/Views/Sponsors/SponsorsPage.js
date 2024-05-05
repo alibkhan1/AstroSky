@@ -3,7 +3,7 @@ import Aymin from '../../assets/SponsorLogos/Aymin.jpg';
 import Urology from '../../assets/SponsorLogos/Urology.jpg';
 import Urgent from '../../assets/SponsorLogos/UrgentCare.jpg';
 import goddardSchool from '../../assets/SponsorLogos/goddardSchool.png';
-import LiveActive from '../../assets/SponsorLogos/LiveActive.jpeg';
+import LiveActive from '../../assets/SponsorLogos/LiveActive.png';
 import Sponsors from '../../components/Sponsors/Sponsors.js';
 
 
